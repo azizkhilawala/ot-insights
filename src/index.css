@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply bg-illumio-bg-light text-illumio-text-primary antialiased;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white border border-illumio-border-default rounded-lg shadow-sm;
+  }
+
+  .card-header {
+    @apply px-4 py-3 border-b border-illumio-border-default flex items-center justify-between;
+  }
+
+  .card-body {
+    @apply p-0;
+  }
+
+  .btn-primary {
+    @apply bg-illumio-primary hover:bg-illumio-primary-dark text-white px-4 py-2 rounded-md font-medium transition-colors;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-illumio-bg-elevated text-illumio-text-primary px-4 py-2 rounded-md font-medium border border-illumio-border-default transition-colors;
+  }
+
+  .btn-toggle {
+    @apply px-3 py-1.5 text-sm font-medium rounded-md transition-colors;
+  }
+
+  .btn-toggle-active {
+    @apply px-3 py-1.5 text-sm font-medium rounded-md transition-colors bg-white text-illumio-text-primary shadow-sm border border-illumio-border-default;
+  }
+
+  .btn-toggle-inactive {
+    @apply px-3 py-1.5 text-sm font-medium rounded-md transition-colors bg-transparent text-illumio-text-secondary hover:text-illumio-text-primary;
+  }
+
+  .dropdown-trigger {
+    @apply flex items-center gap-2 px-3 py-1.5 bg-white border border-illumio-border-default rounded-md text-sm text-illumio-text-primary hover:bg-illumio-bg-elevated transition-colors cursor-pointer;
+  }
+
+  .table-header {
+    @apply text-xs font-medium text-illumio-text-secondary uppercase tracking-wider;
+  }
+
+  .table-cell {
+    @apply text-sm text-illumio-text-primary;
+  }
+
+  .status-badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium;
+  }
+
+  .status-badge-success {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-illumio-success-light;
+    color: #065f46;
+  }
+
+  .status-badge-warning {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-illumio-warning-light;
+    color: #92400e;
+  }
+
+  .status-badge-danger {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-illumio-danger-light;
+    color: #991b1b;
+  }
+
+  .status-badge-info {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-illumio-info-light;
+    color: #1e40af;
+  }
+
+  .widget-table th {
+    @apply px-3 py-2 text-left text-xs font-medium text-illumio-text-secondary bg-illumio-bg-light border-b border-illumio-border-default;
+  }
+
+  .widget-table td {
+    @apply px-3 py-2 text-sm text-illumio-text-primary border-b border-illumio-border-light;
+  }
+
+  .widget-table tr:hover td {
+    @apply bg-illumio-bg-light;
+  }
+
+  .expandable-row {
+    @apply cursor-pointer;
+  }
+
+  .flow-indicator {
+    @apply inline-flex items-center gap-1 text-xs;
+  }
+
+  .flow-up {
+    @apply text-illumio-success;
+  }
+
+  .flow-down {
+    @apply text-illumio-danger;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
